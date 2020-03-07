@@ -1,0 +1,62 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+
+<main id="site-main" class="site-main outer">
+    <div class="inner posts">
+        <div class="columns is-multiline is-variable is-8">
+
+            <div class="column is-full divider"><hr></div>
+
+            {{#author}}
+                <div class="column is-full">
+                    <div class="author-info content">
+                        <div class="columns">
+                            {{#if profile_image}}
+                                <div class="column is-one-fifth is-hidden-mobile">
+                                    <img class="author-profile-image image" src="{{img_url profile_image size="m"}}" alt="{{name}}" />
+                                </div>
+                            {{/if}}
+                            <div class="column is-four-fifths">
+                                <h1 class="author-name is-size-2">{{name}}</h1>
+                                {{#if bio}}
+                                    <p class="author-bio">{{bio}}</p>
+                                {{/if}}
+
+                                <ul class="author-meta">
+                                    {{#if location}}
+                                        <li class="author-location">{{location}}</li>
+                                    {{/if}}
+                                    <li class="author-stats">
+                                        {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+                                    </li>
+                                    {{#if website}}
+                                        <li class="author-social-link"><a href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a></li>
+                                    {{/if}}
+                                    {{#if twitter}}
+                                        <li class="author-social-link"><a href="{{twitter_url}}" target="_blank" rel="noopener">{{t "Twitter"}}</a></li>
+                                    {{/if}}
+                                    {{#if facebook}}
+                                        <li class="author-social-link"><a href="{{facebook_url}}" target="_blank" rel="noopener">{{t "Facebook"}}</a></li>
+                                    {{/if}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/author}}
+
+            {{#foreach posts}}
+
+                    {{> "post-card"}}
+
+                {{#has number="4"}}
+                    <div class="column is-full divider is-hidden-mobile"><hr></div>
+                {{/has}}
+
+            {{/foreach}}
+        </div>
+    </div>
+</main>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black%7CMontserrat:800%7CLibre+Caslon:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/app.css"}}" />
+
+    {{{block "styles"}}}
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body>
+
+    <div class="container">
+        <header class="top-navigation">
+            {{navigation}}
+        </header>
+
+        <div class="main-body">
+            {{{body}}}
+        </div>
+
+        <footer>
+
+            <div class="columns is-multiline is-variable is-8">
+                <div class="column is-full divider"><hr></div>
+
+                {{!-- Email subscribe form at the bottom of the page --}}
+                {{#if @labs.members}}
+                    {{> subscribe-form}}
+                {{/if}}
+
+                <section class="column is-full has-text-centered">
+                    {{navigation type="secondary"}}
+                </section>
+
+                <div class="column is-full has-text-centered">
+                    <ul class="small-nav">
+                        <li><a href="{{@site.url}}">{{t "Latest Posts"}}</a></li>
+                        {{#if @site.facebook}}<li><a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">{{t "Facebook"}}</a></li>{{/if}}
+                        {{#if @site.twitter}}<li><a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">{{t "Twitter"}}</a></li>{{/if}}
+                    </ul>
+                </div>
+
+                <div class="column is-full has-text-centered">
+                    <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="{{asset "js/app.js"}}"></script>
+    {{{block "scripts"}}}
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>-->
+
+    <script>
+        // $(document).ready(function() {
+        //     "use strict";
+        //
+        //     var images = document.querySelectorAll('.kg-gallery-image img');
+        //     images.forEach(function (image) {
+        //         var container = image.closest('.kg-gallery-image');
+        //         var width = image.attributes.width.value;
+        //         var height = image.attributes.height.value;
+        //         var ratio = width / height;
+        //         container.style.flex = ratio + ' 1 0%';
+        //     });
+        //
+        //     var post_content = $(".post-content");
+        //     post_content.fitVids();
+        // });
+
+
+    </script>
+
+<!--    <script id="dsq-count-scr" src="//test-comment-4.disqus.com/count.js" async></script>-->
+
+    {{ghost_foot}}
+</body>
+</html>
