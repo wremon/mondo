@@ -1,0 +1,29 @@
+<div class="column is-full">
+    <div class="subscribe-section">
+        <div class="columns is-variable is-8">
+            <section class="subscribe-form column is-three-fifths is-offset-one-fifth content">
+                <h3 class="subscribe-form-title has-text-centered is-size-3">{{{t "Subscribe to {site_title}" site_title=@site.title}}}</h3>
+                <p class="subscribe-form-description has-text-centered">{{t "Get the latest posts delivered right to your inbox"}}</p>
+                <form data-members-form="subscribe">
+                    <div class="columns is-variable is-2">
+                        <div class="column is-8">
+                            <input class="subscribe-email input" data-members-email placeholder="youremail@example.com" autocomplete="false" />
+                        </div>
+                        <div class="column is-4">
+                            <button class="button primary is-fullwidth" type="submit">
+                                <span class="button-content">{{t "Subscribe"}}</span>
+                                <span class="button-loader">{{> "icons/loader"}}</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="message-success">
+                        <span>{{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription."}}}</span>
+                    </div>
+                    <div class="message-error">
+                        <span>{{t "Please enter a valid email address!"}}</span>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
