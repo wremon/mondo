@@ -8,7 +8,7 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
         <div class="columns is-multiline is-variable is-8">
 
-            <div class="column is-full divider"><hr></div>
+            <div class="column is-full divider first-divider"><hr></div>
 
             {{#author}}
                 <div class="column is-full">
@@ -46,6 +46,14 @@ into the {body} of the default.hbs template --}}
                         </div>
                     </div>
                 </div>
+
+                {{#if cover_image}}
+                    <style type="text/css">
+                        body {
+                            background-image: url({{img_url cover_image size='xl'}});
+                        }
+                    </style>
+                {{/if}}
             {{/author}}
 
             {{#foreach posts}}

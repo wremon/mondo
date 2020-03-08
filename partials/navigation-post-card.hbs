@@ -1,0 +1,29 @@
+
+
+<div class="post-image-container">
+    <a href="{{url}}">
+        <div class="post-image-box">
+            <div class="post-image" style="background-image: url({{img_url feature_image size='l'}});"></div>
+
+            <header>
+                <h2 class="post-title is-size-4">{{title}}</h2>
+            </header>
+        </div>
+    </a>
+</div>
+
+<footer>
+    <ul class="author-list">
+        {{#foreach authors}}
+            <li class="author-list-item">
+                <a href="{{url}}" class="is-size-5">{{name}}</a>
+            </li>
+        {{/foreach}}
+    </ul>
+    <span class="byline-date">
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+        <span class="bull">&#8208;</span> {{reading_time}}
+    </span>
+
+    <a href="{{url}}" class="read-more is-size-2">&#10142;</a>
+</footer>

@@ -1,0 +1,22 @@
+{{#if primary_tag}}
+    {{#get "posts" limit="4" include="authors" as |recent_posts|}}
+        {{#if recent_posts}}
+            <section class="column is-half">
+                <div class="divider divider-full is-hidden-tablet"><hr></div>
+                <h3 class="is-size-3">{{t "Recent Posts"}}</h3>
+                <ul class="related-post">
+                {{#foreach recent_posts visibility='all'}}
+                    <li>
+                        <h2 class="post-title"><a href="{{url}}" class="is-size-5">{{title}}</a></h2>
+                        <div class="author-list">
+                            {{#foreach authors}}
+                                <a href="{{url}}" class="has-text-muted is-size-6">{{name}}</a>
+                            {{/foreach}}
+                        </div>
+                    </li>
+                {{/foreach}}
+                </ul>
+            </section>
+        {{/if}}
+    {{/get}}
+{{/if}}

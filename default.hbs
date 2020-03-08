@@ -12,6 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black%7CMontserrat:800%7CLibre+Caslon:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/app.css"}}" />
 
+    <style type="text/css">
+        {{#if @site.cover_image}}
+            body {
+                background-image: url({{img_url @site.cover_image size='xl'}});
+            }
+        {{/if}}
+    </style>
+
     {{{block "styles"}}}
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
@@ -22,6 +30,13 @@
 
     <div class="container">
         <header class="top-navigation">
+            <div class="site-identification">
+                {{#if @site.logo}}
+                    <a href="{{@site.url}}"><img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                    <a href="{{@site.url}}"><h2 class="site-title is-size-4">{{@site.title}}</h2></a>
+                {{/if}}
+            </div>
             {{navigation}}
         </header>
 

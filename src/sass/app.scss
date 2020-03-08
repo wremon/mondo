@@ -22,6 +22,9 @@ body {
   font-size: 1.25rem;
   color: $text-color;
   line-height: 1.85em;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1,
@@ -115,11 +118,17 @@ p {
     }
   }
 
-  .post-full-image,
-  .kg-width-wide {
+  .post-full-image {
     img,
     .kg-image {
       max-width: 1344px;
+    }
+  }
+
+  .kg-width-wide {
+    img,
+    .kg-image {
+      max-width: 1284px;
     }
   }
 
@@ -135,29 +144,48 @@ p {
   .kg-gallery-container {
     display: flex;
     flex-direction: column;
-    max-width: 1344px;
+    max-width: 1284px;
     width: 100vw;
   }
 }
 
+@media screen and (max-width: $tablet - 1px) {
+  .post-full-image {
+    img,
+    .kg-image {
+      max-width: 100% !important;
+    }
+  }
+  .content {
+    figure {
+      .kg-image {
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+
 // ------------------------------ IMAGE
 
 .kg-bookmark-card {
-  width: 100%;
+  //width: 100%;
   position: relative;
   margin: 30px 0 !important;
   text-align: inherit !important;
+  background: $link-color;
 }
+
 
 .kg-bookmark-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-  //color: $color-white !important;
+  color: $background-color !important;
   font-family: inherit;
   font-weight: 400 !important;
   text-decoration: none !important;
-  background: lighten($link-color, 3%);
+  border: none !important;
   @include transition-effect(background, .2s, ease-out);
 
   &:hover {
@@ -392,6 +420,32 @@ p {
   }
 }
 
+.site-identification {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .site-title {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 1.5rem;
+
+    &:before,
+    &:after {
+      content: " ";
+      width: 50px;
+      height: 5px;
+      display: inline-block;
+      margin: 0 10px 3px;
+      border-top: 3px solid $link-color;
+    }
+  }
+
+  a {
+    border: none !important;
+    color: $link-color !important;
+  }
+}
+
 footer {
   ul {
     &.nav {
@@ -436,6 +490,44 @@ footer {
   }
 }
 
+@media screen and (max-width: $tablet - 1px) {
+  .top-navigation {
+    padding-bottom: 0;
+
+    ul {
+      &.nav {
+        li {
+          font-size: 1rem;
+          margin-right: 10px;
+
+          a {
+            display: block;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .site-identification {
+    margin-bottom: 0;
+  }
+
+  footer {
+    ul {
+      &.nav {
+        li {
+          font-size: 1rem;
+          margin-right: 10px;
+        }
+
+        a {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}
 
 // ------------------------------ NAVIGATION
 
@@ -621,9 +713,17 @@ footer {
 
 // ------------------------------ SUBSCRIBE
 
-
+a.has-text-muted,
 .has-text-muted {
   color: lighten($text-color, 20%);
+}
+
+a.has-text-muted {
+
+  &:hover {
+    border-color: lighten($text-color, 10%);
+    color: lighten($text-color, 10%);
+  }
 }
 
 // ------------------------------ TAG STYLE
@@ -740,9 +840,46 @@ footer {
     margin: 0;
     background: $link-color;
   }
-}
 
+  &.first-divider {
+    margin-top: 30px;
+  }
+}
 
 .is-paddingless-top {
   padding-top: 0 !important;
+}
+
+.container {
+  padding: 30px;
+  background-color: $background-color;
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .container {
+    padding: 0;
+  }
+}
+
+
+
+.related-post {
+  margin-top: 1.5rem;
+  li {
+    border-bottom: 1px solid darken($background-color, 25%);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .post-title {
+    a {
+
+    }
+  }
 }
