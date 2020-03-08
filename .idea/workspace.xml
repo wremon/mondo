@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22a6217-ee6f-44a3-8148-fb6000f7c151" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/partials/navigation-post-card.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/partials/related-posts.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/author.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/default.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/post-card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/partials/post-card.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/post.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/app.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

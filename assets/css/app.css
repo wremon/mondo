@@ -12516,6 +12516,10 @@ footer ul.small-nav li {
   padding-top: 2em;
 }
 
+.post-full .post-footer > .divider {
+  margin: 0;
+}
+
 .subscribe-section {
   padding: 4em;
   background: #000;
