@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black%7CMontserrat:800%7CLibre+Caslon:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/app.css"}}" />
 
-    <style type="text/css">
-        {{#if @site.cover_image}}
-            body {
-                background-image: url({{img_url @site.cover_image size='xl'}});
-            }
-        {{/if}}
+    {{#if @site.cover_image}}
+    <style>
+        body {
+            background-image: url({{img_url @site.cover_image size='xl'}});
+        }
     </style>
+    {{/if}}
 
     {{{block "styles"}}}
 
@@ -54,9 +54,9 @@
                     {{> subscribe-form}}
                 {{/if}}
 
-                <section class="column is-full has-text-centered">
+                <div class="column is-full has-text-centered">
                     {{navigation type="secondary"}}
-                </section>
+                </div>
 
                 <div class="column is-full has-text-centered">
                     <ul class="small-nav">
