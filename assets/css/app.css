@@ -12220,6 +12220,12 @@ p {
      object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .kg-bookmark-card {
+    max-width: 100%;
+  }
+}
+
 .post-card {
   position: relative;
 }
@@ -12622,6 +12628,12 @@ footer ul.small-nav li {
 
 .message-invalid > span {
   background: #f8c602;
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe-section {
+    padding: 1em;
+  }
 }
 
 a.has-text-muted,

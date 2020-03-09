@@ -264,6 +264,12 @@ p {
   }
 }
 
+@media screen and (max-width: $tablet - 1px) {
+  .kg-bookmark-card {
+    max-width: 100%;
+  }
+}
+
 // ------------------------------ POST CARD
 .post-card {
   position: relative;
@@ -714,6 +720,11 @@ footer {
   background: #f8c602;
 }
 
+@media screen and (max-width: $tablet - 1px) {
+  .subscribe-section {
+    padding: 1em;
+  }
+}
 
 // ------------------------------ SUBSCRIBE
 
