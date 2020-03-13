@@ -1,0 +1,12 @@
+@mixin transition-effect($attribute, $duration, $ease) {
+  -moz-transition: $attribute $duration $ease;
+  -webkit-transition: $attribute $duration $ease;
+  -o-transition: $attribute $duration $ease;
+  transition: $attribute $duration $ease;
+}
+
+@mixin border-radius($size) {
+  -webkit-border-radius: $size;
+  -moz-border-radius: $size;
+  border-radius: $size;
+}

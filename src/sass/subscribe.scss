@@ -1,0 +1,95 @@
+.subscribe-section {
+  padding: 4em;
+  background: $link-color;
+
+  p,
+  h3 {
+    color: $background-color !important;
+  }
+
+  .input,
+  .button {
+    @include border-radius(0);
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    background: $link-color;
+    color: $background-color;
+    border: 2px solid $background-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 4px solid $background-color
+    }
+
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder,
+    &::placeholder {
+      color: lighten($link-color, 50%);
+    }
+  }
+
+  form {
+    margin-top: 3em;
+  }
+
+}
+
+.subscribe-form .button-loader,
+.subscribe-form .message-success,
+.subscribe-form .message-error {
+  display: none;
+}
+
+.subscribe-form .loading .button-content {
+  visibility: hidden;
+}
+
+.subscribe-form .success .message-success,
+.subscribe-form .invalid .message-error,
+.subscribe-form .error .message-error {
+  text-align: center;
+}
+
+.subscribe-form .success .message-success {
+  display: block;
+  color: color(var(--green) l(-5%));
+}
+
+.subscribe-form .invalid .message-error,
+.subscribe-form .error .message-error {
+  display: block;
+}
+
+.message-success,
+.message-error,
+.message-invalid {
+  margin-top: 2em;
+  > span {
+    padding: 10px 20px;
+    color: white;
+  }
+
+  strong {
+    color: white;
+  }
+}
+
+.message-success > span {
+  background: #4CAF50;
+}
+
+.message-error > span {
+  background: #f73838;
+}
+
+.message-invalid > span {
+  background: #f8c602;
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .subscribe-section {
+    padding: 1em;
+  }
+}

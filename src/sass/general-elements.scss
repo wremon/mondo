@@ -1,0 +1,56 @@
+body {
+  font-family: 'Libre Caslon Text', serif;
+  font-size: 1.25rem;
+  line-height: 1.85em;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $text-color;
+}
+
+strong,
+em {
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6,
+h6,
+.is-size-1,
+.is-size-2,
+.is-size-3,
+.is-size-4,
+.is-size-5,
+.is-size-6,
+.heading-font {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  color: $text-color;
+
+  a {
+    color: $link-color;
+  }
+}
+
+a {
+  color: $link-color;
+  outline: none !important;
+
+  &:hover {
+    color: $link-color;
+    border-bottom: 2px solid $link-color;
+  }
+}
+
+p {
+  min-width: 100%;
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .columns {
+    margin: 0 !important;
+  }
+}

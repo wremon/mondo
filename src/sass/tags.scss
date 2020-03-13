@@ -1,0 +1,59 @@
+.author-info {
+  background: $link-color;
+  padding: 30px;
+  margin-bottom: 60px;
+
+  p,
+  h1 {
+    color: $background-color !important;
+  }
+
+  .image {
+    @include border-radius(50%);
+  }
+
+  .author-meta {
+    margin-left: 0;
+    li {
+      display: inline-block;
+
+      &,
+      a {
+        color: $link-color;
+        background: $background-color;
+        margin-right: 10px;
+        text-decoration: none;
+        border: 2px solid $link-color;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        &:hover {
+          border-color: $background-color;
+        }
+      }
+    }
+
+    a,
+    .author-location,
+    .author-stats {
+      padding: 5px 10px;
+      line-height: 1;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+}
+
+.tag-info {
+  background: $link-color;
+  padding: 30px;
+  margin-bottom: 60px;
+
+  p,
+  h1 {
+    color: $background-color !important;
+  }
+}

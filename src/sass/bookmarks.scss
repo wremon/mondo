@@ -1,0 +1,101 @@
+.kg-bookmark-card {
+  //width: 100%;
+  position: relative;
+  margin: 30px 0 !important;
+  text-align: inherit !important;
+  background: $link-color;
+}
+
+
+.kg-bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  color: $background-color !important;
+  font-family: inherit;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  border: none !important;
+  @include transition-effect(background, .2s, ease-out);
+
+  &:hover {
+    background: $link-color;
+  }
+}
+
+.kg-bookmark-content {
+  flex-basis: 0;
+  flex-grow: 999;
+  padding: 30px;
+  order: 1;
+  width: 100%;
+
+  .kg-bookmark-title {
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  .kg-bookmark-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    //color: $background-color !important;
+  }
+
+  .kg-bookmark-metadata,
+  .kg-bookmark-description {
+    margin-top: .75rem;
+  }
+
+  .kg-bookmark-metadata {
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //color: $color-cashmere !important;
+  }
+
+  .kg-bookmark-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    margin-right: .5em;
+    margin-bottom: .05em;
+  }
+
+  .kg-bookmark-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .kg-bookmark-publisher {
+    &:before {
+      content: "•";
+      margin: 0 .5em;
+    }
+  }
+}
+
+.kg-bookmark-thumbnail {
+  display: flex;
+  flex-basis: 10rem;
+  flex-grow: 1;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .kg-bookmark-card {
+    max-width: 100%;
+  }
+}

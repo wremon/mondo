@@ -1,0 +1,16 @@
+a.has-text-muted,
+.has-text-muted {
+  color: lighten($text-color, 20%);
+}
+
+a.has-text-muted {
+
+  &:hover {
+    border-color: lighten($text-color, 10%);
+    color: lighten($text-color, 10%);
+  }
+}
+
+.is-paddingless-top {
+  padding-top: 0 !important;
+}

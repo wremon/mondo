@@ -8,14 +8,14 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
         <div class="columns is-multiline is-variable is-8">
 
-            <div class="column is-full divider first-divider"><hr></div>
+            <div class="column is-three-fifths is-offset-one-fifth divider first-divider"><hr></div>
 
             {{#tag}}
                 <div class="column is-full">
-                    <div class="author-info content">
-                        <h1 class="author-name is-size-2">{{name}}</h1>
+                    <div class="tag-info content">
+                        <h1 class="tag-name is-size-2">{{name}}</h1>
                         {{#if description}}
-                            <p class="author-bio">{{description}}</p>
+                            <p class="tag-description">{{description}}</p>
                         {{else}}
                             <p>{{plural ../pagination.total empty='No posts' singular='A collection of % post' plural='A collection of % posts'}}</p>
                         {{/if}}

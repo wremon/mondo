@@ -1,6 +1,7 @@
 import jquery from 'jquery/src/jquery';
+import '../../assets/js/prism';
 import fitvids from 'fitvids/dist/fitvids';
-// import 'fitvids/dist/fitvids';
+import 'lazysizes';
 
 $(document).ready(function() {
     "use strict";
@@ -15,5 +16,8 @@ $(document).ready(function() {
     });
 
     $(".post-content").find('.kg-card.kg-embed-card').wrap('<div class="fit-vid"></div>');
+
     fitvids(".fit-vid");
+
+    $('.kg-card img').addClass('lazyload');
 });

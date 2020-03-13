@@ -1,0 +1,149 @@
+.top-navigation {
+  padding: 35px 0;
+
+  ul {
+    &.nav {
+      font-family: 'Archivo Black', sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        font-size: 3rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: $link-color;
+        border: none;
+        padding: 10px 20px;
+
+        &:hover {
+          color: $background-color;
+          background: $link-color;
+        }
+      }
+    }
+  }
+}
+
+.site-identification {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .site-title {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 1.5rem;
+
+    &:before,
+    &:after {
+      content: " ";
+      width: 50px;
+      height: 5px;
+      display: inline-block;
+      margin: 0 10px 3px;
+      border-top: 3px solid $link-color;
+    }
+  }
+
+  a {
+    border: none !important;
+    color: $link-color !important;
+  }
+}
+
+footer {
+  ul {
+    &.nav {
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 2em 0;
+
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        font-size: 1.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: $link-color;
+        border: none;
+        padding: 10px 20px;
+
+        &:hover {
+          color: $background-color;
+          background: $link-color;
+        }
+      }
+    }
+
+    &.small-nav {
+      li {
+        display: inline-block;
+        font-size: 1.30rem;
+        margin-right: 25px;
+
+        a {
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .top-navigation {
+    padding-bottom: 0;
+
+    ul {
+      &.nav {
+        li {
+          font-size: 1rem;
+          margin-right: 10px;
+
+          a {
+            display: block;
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .site-identification {
+    margin-bottom: 0;
+  }
+
+  footer {
+    ul {
+      &.nav {
+        li {
+          font-size: 1rem;
+          margin: 0;
+          display: block;
+        }
+
+        a {
+          padding: 0 5px;
+        }
+      }
+
+      &.small-nav {
+        li {
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

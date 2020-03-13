@@ -1,0 +1,14 @@
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fit-vid {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+}

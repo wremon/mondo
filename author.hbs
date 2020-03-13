@@ -8,7 +8,7 @@ into the {body} of the default.hbs template --}}
     <div class="inner posts">
         <div class="columns is-multiline is-variable is-8">
 
-            <div class="column is-full divider first-divider"><hr></div>
+            <div class="column is-three-fifths is-offset-one-fifth divider first-divider"><hr></div>
 
             {{#author}}
                 <div class="column is-full">
@@ -16,7 +16,7 @@ into the {body} of the default.hbs template --}}
                         <div class="columns">
                             {{#if profile_image}}
                                 <div class="column is-one-fifth is-hidden-mobile">
-                                    <img class="author-profile-image image" src="{{img_url profile_image size="m"}}" alt="{{name}}" />
+                                    <img class="author-profile-image image lazyload" src="{{img_url profile_image size="m"}}" alt="{{name}}" />
                                 </div>
                             {{/if}}
                             <div class="column is-four-fifths">

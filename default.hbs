@@ -11,6 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black%7CMontserrat:800%7CLibre+Caslon:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/app.css"}}" />
+<!--    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/prism.css"}}" />-->
 
     {{#if @site.cover_image}}
     <style>
@@ -32,7 +33,7 @@
         <header class="top-navigation">
             <div class="site-identification">
                 {{#if @site.logo}}
-                    <a href="{{@site.url}}"><img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" /></a>
+                    <a href="{{@site.url}}"><img class="site-logo lazyload" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" /></a>
                 {{else}}
                     <a href="{{@site.url}}"><h2 class="site-title is-size-4">{{@site.title}}</h2></a>
                 {{/if}}
@@ -75,31 +76,8 @@
     </div>
 
     <script src="{{asset "js/app.js"}}"></script>
+<!--    <script src="{{asset "js/prism.js"}}"></script>-->
     {{{block "scripts"}}}
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"></script>-->
-
-    <script>
-        // $(document).ready(function() {
-        //     "use strict";
-        //
-        //     var images = document.querySelectorAll('.kg-gallery-image img');
-        //     images.forEach(function (image) {
-        //         var container = image.closest('.kg-gallery-image');
-        //         var width = image.attributes.width.value;
-        //         var height = image.attributes.height.value;
-        //         var ratio = width / height;
-        //         container.style.flex = ratio + ' 1 0%';
-        //     });
-        //
-        //     var post_content = $(".post-content");
-        //     post_content.fitVids();
-        // });
-
-
-    </script>
-
-<!--    <script id="dsq-count-scr" src="//test-comment-4.disqus.com/count.js" async></script>-->
-
     {{ghost_foot}}
 </body>
 </html>
