@@ -59,7 +59,7 @@
                                             {{#if profile_image}}
                                                 <img class="author-profile-image image is-hidden-mobile" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
                                             {{/if}}
-                                            <span class="author-name title is-size-5">{{name}}</span>
+                                            <span class="author-name title is-size-5{{#unless profile_image}} no-author-profile-image{{/unless}}">{{name}}</span>
                                         </a>
                                     </li>
                                 {{/foreach}}

@@ -4,3 +4,5 @@ If you like this theme and want to support future development you can become a f
 
 - Responsive layout
 - Disqus support
+- Lazy loader for images
+

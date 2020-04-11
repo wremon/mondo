@@ -12954,6 +12954,10 @@ footer ul.small-nav li {
   color: #ffffff;
 }
 
+.tagged li .title.no-author-profile-image {
+  bottom: 3px;
+}
+
 .author-list li {
   display: inline-block;
   margin-right: 0.75rem;

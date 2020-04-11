@@ -76,6 +76,10 @@
       position: relative;
       bottom: 15px;
       color: $background-color;
+
+      &.no-author-profile-image {
+        bottom: 3px;
+      }
     }
   }
 }

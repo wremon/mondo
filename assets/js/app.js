@@ -15650,8 +15650,8 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rlumapas/node/content/themes/mondo/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /Users/rlumapas/node/content/themes/mondo/src/sass/app.scss */"./src/sass/app.scss");
+__webpack_require__(/*! /Users/rlumapas/node/mondo/content/themes/mondo/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Users/rlumapas/node/mondo/content/themes/mondo/src/sass/app.scss */"./src/sass/app.scss");
 
 
 /***/ })
