@@ -15,3 +15,26 @@
 @import "extended-elements";
 @import "plugins";
 @import "helpers";
+
+
+.pagination {
+  > a,
+  > span {
+    background: $link-color;
+    color: $background-color;
+    border: 2px solid $background-color;
+    margin-right: 0.75rem;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  > a {
+    &:hover {
+      border: 2px solid $link-color;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -12999,6 +12999,10 @@ footer ul.small-nav li {
   margin-right: 0;
 }
 
+.kg-card {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 0;
@@ -13037,5 +13041,23 @@ a.has-text-muted:hover {
 
 .is-paddingless-top {
   padding-top: 0 !important;
+}
+
+.pagination > a,
+.pagination > span {
+  background: #000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  margin-right: 0.75rem;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pagination > a:hover {
+  border: 2px solid #000;
+}
+
+.pagination > a:last-child {
+  margin-right: 0;
 }
 
