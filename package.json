@@ -43,7 +43,7 @@
     "bulma": "^0.8.0",
     "fitvids": "^2.1.1",
     "jquery": "^3.4.1",
-    "lazysizes": "^5.2.0"
+    "lazysizes": "^5.2.1"
   },
   "main": "index.js",
   "scripts": {
